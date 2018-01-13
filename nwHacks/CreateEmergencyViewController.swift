@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
 
 class CreateEmergencyViewController: UIViewController {
+    
+    fileprivate let locationManager = CLLocationManager()
+    
+    var mostRecentUserLocation: CLLocation? {
+        didSet {
+            guard let userLocation = mostRecentUserLocation else {
+                return
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +38,24 @@ class CreateEmergencyViewController: UIViewController {
     @IBAction func policeButtonPressed(_ sender: Any) {
     }
     @IBAction func carCrashButtonPressed(_ sender: Any) {
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension CreateEmergencyViewController: CLLocationManagerDelegate {
+    
+    func setUpLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        mostRecentUserLocation = locations[0] as CLLocation
     }
     
 }
