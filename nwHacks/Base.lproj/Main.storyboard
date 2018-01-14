@@ -170,7 +170,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cxA-wS-LsE">
                                 <rect key="frame" x="0.0" y="368" width="375" height="414"/>
                             </mapView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glp-pl-yWm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glp-pl-yWm">
                                 <rect key="frame" x="108" y="501" width="159" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="glp-pl-yWm" secondAttribute="height" multiplier="159:155" id="Glp-z7-Qqm"/>
@@ -276,12 +276,6 @@
                                     <action selector="policeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IF-FI-8eH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-dJ-ZH6">
-                                <rect key="frame" x="16" y="385" width="139.33333333333334" height="31.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -307,8 +301,6 @@
                             <constraint firstItem="Wwb-gy-7tE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MpW-Yg-bRb"/>
                             <constraint firstItem="GFz-lm-uqt" firstAttribute="top" secondItem="Wwb-gy-7tE" secondAttribute="bottom" constant="30" id="PjA-fx-NG5"/>
                             <constraint firstItem="wbS-5z-bYp" firstAttribute="top" secondItem="wuh-cN-F50" secondAttribute="bottom" constant="21.5" id="Rck-rb-zl3"/>
-                            <constraint firstItem="zK1-dJ-ZH6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RiY-Mt-sT5"/>
-                            <constraint firstItem="zK1-dJ-ZH6" firstAttribute="top" secondItem="CUw-eK-GhM" secondAttribute="bottom" constant="47.329999999999998" id="VOr-ir-RYj"/>
                             <constraint firstItem="wbS-5z-bYp" firstAttribute="width" secondItem="5Du-Bp-Lym" secondAttribute="width" id="XjZ-r6-0Ce"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="glp-pl-yWm" secondAttribute="trailing" constant="108" id="Yae-W8-Eme"/>
                             <constraint firstItem="BnL-NI-lR8" firstAttribute="width" secondItem="wbS-5z-bYp" secondAttribute="width" id="aHI-qH-5rl"/>
