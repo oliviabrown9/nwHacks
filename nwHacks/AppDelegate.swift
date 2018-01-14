@@ -85,8 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         return true
     }
     
-
-    
     private func createEmergency(emergencyType: String) {
         ref = Database.database().reference()
 
