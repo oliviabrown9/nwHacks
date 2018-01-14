@@ -76,7 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatusViewController")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatusViewController") as? StatusViewController
+        initialViewController?.emergencyType = message!
+        
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()

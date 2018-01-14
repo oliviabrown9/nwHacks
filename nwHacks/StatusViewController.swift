@@ -10,7 +10,7 @@ import UIKit
 
 class StatusViewController: UIViewController {
     
-    var emergencyType: String = "this shouldn't be shown"
+    var emergencyType: String = "Emergency"
 
     @IBOutlet weak var emergencyTypeLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
