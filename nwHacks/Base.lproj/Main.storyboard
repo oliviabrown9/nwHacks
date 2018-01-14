@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Book</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Account View Controller-->
         <scene sceneID="CLG-0D-Bst">
@@ -163,61 +158,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-7J-t6U">
-                                <rect key="frame" x="75" y="154" width="61" height="61"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="jUp-lU-z4Z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Fire"/>
-                                <connections>
-                                    <action selector="fireButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rq-AW-Smt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-NI-lR8">
-                                <rect key="frame" x="223" y="161" width="85" height="47"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Velvet Sun" translatesAutoresizingMaskIntoConstraints="NO" id="THa-V5-B0q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-1Q-BNh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-NI-lR8">
+                                <rect key="frame" x="16" y="185" width="126" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="Eza-7r-Dr3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Medical"/>
+                                <state key="normal" title="Hospital" image="icons8-hospital-50"/>
                                 <connections>
                                     <action selector="medicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsf-1M-ziT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-9P-G6s">
-                                <rect key="frame" x="220" y="394" width="90" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="R2u-OC-Gm5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Car Crash"/>
-                                <connections>
-                                    <action selector="carCrashButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2z-uv-IF5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-Bp-Lym">
-                                <rect key="frame" x="65" y="385" width="80" height="57"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="Police"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-Bp-Lym">
+                                <rect key="frame" x="154" y="137" width="89" height="40"/>
+                                <state key="normal" title="Crime" image="icons8-gun-filled-40"/>
                                 <connections>
                                     <action selector="policeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IF-FI-8eH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-7J-t6U">
+                                <rect key="frame" x="16" y="108" width="70" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="jUp-lU-z4Z"/>
+                                </constraints>
+                                <state key="normal" image="icons8-fires-50"/>
+                                <connections>
+                                    <action selector="fireButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rq-AW-Smt"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwb-gy-7tE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.95138439119170981" green="0.36363819557303195" blue="0.390634638411405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Emergy" id="L9a-QD-stn"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-5z-bYp">
+                                <rect key="frame" x="150" y="235" width="86" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Flood" image="icons8-floods-40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzT-Zp-H6Z">
+                                <rect key="frame" x="281" y="137" width="94" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icons8-earthquakes-40"/>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wlj-lc-a4I">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Report your emergency!" id="xTr-gr-rMM">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.95138439119999996" green="0.36363819559999999" blue="0.39063463840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sos" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glp-pl-yWm">
+                                <rect key="frame" x="108" y="410" width="159" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjm-Jz-CXM">
+                                <rect key="frame" x="30" y="185" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Crime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuh-cN-F50">
+                                <rect key="frame" x="150" y="185" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EarthQuake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ6-8q-4M1">
+                                <rect key="frame" x="259" y="184" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUw-eK-GhM">
+                                <rect key="frame" x="23" y="285" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA0-RF-3hi">
+                                <rect key="frame" x="150" y="283" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whats your Emergency?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFz-lm-uqt">
+                                <rect key="frame" x="23" y="61" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ina-9P-G6s" secondAttribute="trailing" constant="65" id="1tC-9R-mC8"/>
                             <constraint firstItem="5Du-Bp-Lym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="8we-0N-0Vo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Du-Bp-Lym" secondAttribute="bottom" constant="225" id="94C-6N-Pf9"/>
                             <constraint firstItem="BnL-NI-lR8" firstAttribute="leading" secondItem="Byh-7J-t6U" secondAttribute="trailing" constant="87" id="ISd-V5-Fti"/>
-                            <constraint firstItem="5Du-Bp-Lym" firstAttribute="baseline" secondItem="Ina-9P-G6s" secondAttribute="firstBaseline" id="MNy-Au-bIu"/>
-                            <constraint firstItem="Ina-9P-G6s" firstAttribute="leading" secondItem="5Du-Bp-Lym" secondAttribute="trailing" constant="75" id="PWO-PK-vKr"/>
                             <constraint firstItem="Byh-7J-t6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="Rix-kR-vld"/>
-                            <constraint firstItem="BnL-NI-lR8" firstAttribute="centerX" secondItem="Ina-9P-G6s" secondAttribute="centerX" id="Xuh-Pj-v8R"/>
                             <constraint firstItem="Byh-7J-t6U" firstAttribute="centerX" secondItem="5Du-Bp-Lym" secondAttribute="centerX" id="hDR-Ty-but"/>
                             <constraint firstItem="BnL-NI-lR8" firstAttribute="baseline" secondItem="Byh-7J-t6U" secondAttribute="firstBaseline" id="j99-MN-cci"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ina-9P-G6s" secondAttribute="bottom" constant="234" id="thW-j9-KOg"/>
                             <constraint firstItem="Byh-7J-t6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="wo5-wM-qI1"/>
                             <constraint firstItem="BnL-NI-lR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="wz3-ZW-QfM"/>
                         </constraints>
@@ -271,4 +329,14 @@
             <point key="canvasLocation" x="840" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Velvet Sun" width="1280" height="800"/>
+        <image name="icons8-earthquakes-40" width="40" height="40"/>
+        <image name="icons8-fires-50" width="50" height="50"/>
+        <image name="icons8-floods-40" width="40" height="40"/>
+        <image name="icons8-gun-filled-40" width="40" height="40"/>
+        <image name="icons8-hospital-50" width="50" height="50"/>
+        <image name="sos" width="300" height="300"/>
+        <image name="white" width="1278" height="990"/>
+    </resources>
 </document>
