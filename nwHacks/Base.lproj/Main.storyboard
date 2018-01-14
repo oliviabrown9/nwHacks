@@ -320,6 +320,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="Wwb-gy-7tE" id="eMj-uc-ctB"/>
                         <segue destination="Jeq-0h-vfd" kind="show" identifier="toStatus" id="I0b-au-4FQ"/>
                     </connections>
                 </viewController>

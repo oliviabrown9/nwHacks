@@ -13,6 +13,7 @@ import Firebase
 class EmergencyViewController: UIViewController {
     
     fileprivate let locationManager = CLLocationManager()
+    @IBOutlet weak var navBar: UINavigationBar!
     
     var emergencyType: String?
     var mostRecentUserLocation: CLLocation?
@@ -21,13 +22,16 @@ class EmergencyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var colors = [UIColor]()
+        colors.append(UIColor(red: 225/255, green: 238/255, blue: 195/255, alpha: 1))
+        colors.append(UIColor(red: 240/255, green: 80/255, blue: 83/255, alpha: 1))
+        navBar.setGradientBackground(colors: colors)
+        
         ref = Database.database().reference()
         setUpLocationManager()
     }
     
     private func createEmergency(emergencyType: String) {
-        
-        let phoneNumber = "3194273804"
         
         // add emergency to firebase
         let newEmergencyRef = self.ref.child("Emergency").childByAutoId()
@@ -36,11 +40,7 @@ class EmergencyViewController: UIViewController {
         
         newEmergencyRef.setValue(["dispatcherID":dispatcherID, "userID": Auth.auth().currentUser?.uid, "emergencyType": emergencyType])
         newEmergencyRef.child("location").setValue(["altitude": mostRecentUserLocation!.altitude, "latitude": mostRecentUserLocation!.coordinate.latitude, "longitude": mostRecentUserLocation!.coordinate.longitude])
-        
-        // call 911
-//        let url = URL(string: "tel://\(phoneNumber)")
-//        UIApplication.shared.open(url!)
-    }
+        }
     
     func getRequest(params: [String:String]) -> String {
         var myResult: String = ""
@@ -64,7 +64,6 @@ class EmergencyViewController: UIViewController {
         
         let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             if let data = data, let stringResponse = String(data: data, encoding: .utf8) {
-                print("Response \(stringResponse)")
                 myResult = stringResponse
             }
         })
@@ -123,6 +122,42 @@ extension EmergencyViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         mostRecentUserLocation = locations[0] as CLLocation
+    }
+}
+extension CAGradientLayer {
+    
+    convenience init(frame: CGRect, colors: [UIColor]) {
+        self.init()
+        self.frame = frame
+        self.colors = []
+        for color in colors {
+            self.colors?.append(color.cgColor)
+        }
+        startPoint = CGPoint(x: 0, y: 0)
+        endPoint = CGPoint(x: 0, y: 1)
+    }
+    
+    func creatGradientImage() -> UIImage? {
+        
+        var image: UIImage? = nil
+        UIGraphicsBeginImageContext(bounds.size)
+        if let context = UIGraphicsGetCurrentContext() {
+            render(in: context)
+            image = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+}
+extension UINavigationBar {
+    
+    func setGradientBackground(colors: [UIColor]) {
+        
+        var updatedFrame = bounds
+        updatedFrame.size.height += 20
+        let gradientLayer = CAGradientLayer(frame: updatedFrame, colors: colors)
+        setBackgroundImage(gradientLayer.creatGradientImage(), for: UIBarMetrics.default)
     }
 }
 
