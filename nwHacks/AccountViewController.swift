@@ -29,6 +29,14 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func addInfoButtonPressed(_ sender: Any) {
@@ -39,58 +47,37 @@ class AccountViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
         else {
+            let email = "\(firstName.text!)\(lastName.text!)@gmail.com"
+            let password = "\(firstName.text!)\(age.text!)\(lastName.text!)"
             
-            Auth.auth().createUser(withEmail: "\(firstName)\(lastName)@email.com", password: "\(firstName)\(age)\(lastName) ") { (user, error) in
-            }
-            
-            let user = Auth.auth().currentUser
-            print("\(user!) created")
-            
-            self.ref.child("users").child(user!.uid).setValue(["firstName": firstName.text!])
-            self.ref.child("users").child(user!.uid).setValue(["lastName": lastName.text!])
-            self.ref.child("users").child(user!.uid).setValue(["age": age.text!])
-            
-            if let bloodTypeText = bloodType.text {
-                self.ref.child("users").child(user!.uid).setValue(["bloodType": bloodTypeText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["bloodType": ""])
-            }
-            
-            if let heightText = height.text {
-                self.ref.child("users").child(user!.uid).setValue(["height": heightText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["height": ""])
-            }
-            
-            if let weightText = weight.text {
-                self.ref.child("users").child(user!.uid).setValue(["weight": weightText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["weight": ""])
-            }
-            
-            if let hairColorText = hairColor.text {
-                self.ref.child("users").child(user!.uid).setValue(["hairColor": hairColorText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["hairColor": ""])
-            }
-            
-            if let eyeColorText = eyeColor.text {
-                self.ref.child("users").child(user!.uid).setValue(["eyeColor": eyeColorText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["eyeColor": ""])
-            }
-            
-            if let emergencyContactText = emergencyContact.text {
-                self.ref.child("users").child(user!.uid).setValue(["emergencyContact": emergencyContactText])
-            }
-            else {
-                self.ref.child("users").child(user!.uid).setValue(["emergencyContact": ""])
-            }
+            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+                
+                // Check that user isn't NIL
+                if let u = user {
+                    //User is found, goto home screen
+                    print("success")
+                    
+                    let user = Auth.auth().currentUser
+                    
+                    let bloodTypeText = self.bloodType.text ?? ""
+                    let heightText = self.height.text ?? ""
+                    let weightText = self.weight.text ?? ""
+                    let hairColorText = self.hairColor.text ?? ""
+                    let eyeColorText = self.eyeColor.text ?? ""
+                    let emergencyContactText = self.emergencyContact.text ?? ""
+                    
+                    
+                    self.ref.child("Users").child(user!.uid).setValue(["firstName": self.firstName.text!, "lastName": self.lastName.text!, "age": self.age.text!, "bloodType": bloodTypeText, "height": heightText, "weight": weightText, "hairColor": hairColorText, "eyeColor": eyeColorText, "emergencyContact": emergencyContactText])
+                }
+                else {
+                    print(":(")
+                    if let error = error {
+                        print(error)
+                    }
+                }
+                
+            })
         }
+        try! Auth.auth().signOut()
     }
 }
