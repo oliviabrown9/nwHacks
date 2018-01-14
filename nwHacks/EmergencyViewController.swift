@@ -59,8 +59,13 @@ class EmergencyViewController: UIViewController {
         createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
-    @IBAction func carCrashButtonPressed(_ sender: Any) {
-        emergencyType = "Car Crash"
+    @IBAction func earthquakeButtonPressed(_ sender: Any) {
+        emergencyType = "Earthquake"
+        createEmergency(emergencyType: emergencyType!)
+        performSegue(withIdentifier: "toStatus", sender: self)
+    }
+    @IBAction func floodButtonPressed(_ sender: Any) {
+        emergencyType = "Flood"
         createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
