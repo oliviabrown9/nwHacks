@@ -34,11 +34,9 @@ class StatusViewController: UIViewController {
         avatarImageView.isUserInteractionEnabled = true
         
         for _ in 0..<20 {
-
             timer = Timer.scheduledTimer(timeInterval: delay, target: self, selector: #selector(addPulse), userInfo: nil, repeats: true)
         }
     }
-    
     
     @objc func addPulse(){
             let pulse = Pulsing(numberOfPulses: 1, radius: 250, position: avatarImageView.center)

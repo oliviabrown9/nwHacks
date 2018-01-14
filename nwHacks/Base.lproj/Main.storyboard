@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Velvet Sun" translatesAutoresizingMaskIntoConstraints="NO" id="THa-V5-B0q">
-                                <rect key="frame" x="0.0" y="368" width="375" height="444"/>
+                                <rect key="frame" x="0.0" y="394" width="375" height="418"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cxA-wS-LsE">
                                 <rect key="frame" x="0.0" y="368" width="375" height="414"/>
@@ -310,7 +310,7 @@
                             <constraint firstItem="5Du-Bp-Lym" firstAttribute="width" secondItem="Byh-7J-t6U" secondAttribute="width" id="9zj-vc-z2D"/>
                             <constraint firstItem="tjm-Jz-CXM" firstAttribute="centerX" secondItem="Byh-7J-t6U" secondAttribute="centerX" id="Act-h4-98W"/>
                             <constraint firstAttribute="bottom" secondItem="THa-V5-B0q" secondAttribute="bottom" id="BOa-ch-ldB"/>
-                            <constraint firstItem="glp-pl-yWm" firstAttribute="centerY" secondItem="THa-V5-B0q" secondAttribute="centerY" constant="-11.5" id="C4C-gP-1b1"/>
+                            <constraint firstItem="glp-pl-yWm" firstAttribute="centerY" secondItem="THa-V5-B0q" secondAttribute="centerY" constant="-24.5" id="C4C-gP-1b1"/>
                             <constraint firstItem="cxA-wS-LsE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GcS-XJ-lLI"/>
                             <constraint firstItem="CUw-eK-GhM" firstAttribute="centerY" secondItem="nA0-RF-3hi" secondAttribute="centerY" id="Ioa-4R-NJ4"/>
                             <constraint firstItem="qzT-Zp-H6Z" firstAttribute="leading" secondItem="5Du-Bp-Lym" secondAttribute="trailing" constant="70" id="K2V-3H-JlR"/>
@@ -351,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="131"/>
+            <point key="canvasLocation" x="384.80000000000001" y="130.78817733990149"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="9Wk-XI-6B9">

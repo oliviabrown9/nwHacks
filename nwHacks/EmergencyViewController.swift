@@ -36,7 +36,7 @@ class EmergencyViewController: UIViewController {
         sosButton.layer.shadowOpacity = 1
         sosButton.layer.shadowOffset = CGSize.zero
         sosButton.layer.shadowRadius = 10
-        mapView.layer.cornerRadius = 10
+        mapView.layer.cornerRadius = 20
         
         ref = Database.database().reference()
         setUpLocationManager()
