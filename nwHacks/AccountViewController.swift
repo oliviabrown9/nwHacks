@@ -68,6 +68,7 @@ class AccountViewController: UIViewController {
                     
                     
                     self.ref.child("Users").child(user!.uid).setValue(["firstName": self.firstName.text!, "lastName": self.lastName.text!, "age": self.age.text!, "bloodType": bloodTypeText, "height": heightText, "weight": weightText, "hairColor": hairColorText, "eyeColor": eyeColorText, "emergencyContact": emergencyContactText])
+                    self.performSegue(withIdentifier: "toCreate", sender: self)
                 }
                 else {
                     print(":(")
@@ -75,9 +76,7 @@ class AccountViewController: UIViewController {
                         print(error)
                     }
                 }
-                
             })
         }
-        try! Auth.auth().signOut()
     }
 }

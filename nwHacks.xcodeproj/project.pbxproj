@@ -10,7 +10,7 @@
 		54FE6AF5718BC9C2883586C1 /* Pods_nwHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EFF64EDA9BD8C48890C29D /* Pods_nwHacks.framework */; };
 		751DA2F5200B171A0047A392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751DA2F4200B171A0047A392 /* GoogleService-Info.plist */; };
 		75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12496200AB9F800BB033F /* AppDelegate.swift */; };
-		75C12499200AB9F800BB033F /* CreateEmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12498200AB9F800BB033F /* CreateEmergencyViewController.swift */; };
+		75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12498200AB9F800BB033F /* EmergencyViewController.swift */; };
 		75C1249C200AB9F800BB033F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249A200AB9F800BB033F /* Main.storyboard */; };
 		75C1249E200AB9F800BB033F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249D200AB9F800BB033F /* Assets.xcassets */; };
 		75C124A1200AB9F800BB033F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249F200AB9F800BB033F /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 		751DA2F4200B171A0047A392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75C12493200AB9F800BB033F /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C12496200AB9F800BB033F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75C12498200AB9F800BB033F /* CreateEmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmergencyViewController.swift; sourceTree = "<group>"; };
+		75C12498200AB9F800BB033F /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		75C1249B200AB9F800BB033F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75C1249D200AB9F800BB033F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C124A0200AB9F800BB033F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			children = (
 				75C1249A200AB9F800BB033F /* Main.storyboard */,
 				75C12496200AB9F800BB033F /* AppDelegate.swift */,
-				75C12498200AB9F800BB033F /* CreateEmergencyViewController.swift */,
+				75C12498200AB9F800BB033F /* EmergencyViewController.swift */,
 				75C124A8200AD04A00BB033F /* AccountViewController.swift */,
 				75C124AA200ADAA400BB033F /* StatusViewController.swift */,
 				75C1249D200AB9F800BB033F /* Assets.xcassets */,
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C124AB200ADAA400BB033F /* StatusViewController.swift in Sources */,
-				75C12499200AB9F800BB033F /* CreateEmergencyViewController.swift in Sources */,
+				75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */,
 				75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */,
 				75C124A9200AD04A00BB033F /* AccountViewController.swift in Sources */,
 			);

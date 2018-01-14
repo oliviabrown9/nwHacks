@@ -148,16 +148,17 @@
                         <outlet property="height" destination="ZG7-1I-3HB" id="IkY-8D-PHY"/>
                         <outlet property="lastName" destination="kEZ-OA-SUa" id="qwO-im-9Sy"/>
                         <outlet property="weight" destination="MWJ-4y-Wyo" id="Te7-NC-dLz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreate" id="f6e-aO-kZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHP-JW-dTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-631.20000000000005" y="130.88455772113943"/>
         </scene>
-        <!--Create Emergency View Controller-->
+        <!--Emergency View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CreateEmergencyViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EmergencyViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

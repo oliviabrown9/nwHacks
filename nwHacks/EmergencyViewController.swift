@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class CreateEmergencyViewController: UIViewController {
+class EmergencyViewController: UIViewController {
     
     fileprivate let locationManager = CLLocationManager()
     
@@ -64,7 +64,7 @@ class CreateEmergencyViewController: UIViewController {
 }
 
 // MARK: - CLLocationManagerDelegate
-extension CreateEmergencyViewController: CLLocationManagerDelegate {
+extension EmergencyViewController: CLLocationManagerDelegate {
     
     func setUpLocationManager() {
         locationManager.delegate = self
