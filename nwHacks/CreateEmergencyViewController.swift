@@ -16,18 +16,27 @@ class CreateEmergencyViewController: UIViewController {
     var emergencyType: String?
     
     var mostRecentUserLocation: CLLocation?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     private func createEmergency() {
-        print()
+        
+        let phoneNumber = "3194273804"
+        print(mostRecentUserLocation?.coordinate as Any)
+        print(mostRecentUserLocation?.altitude as Any)
+        print(mostRecentUserLocation?.floor as Any)
+        
         // find nearest call center
+        
         // send user info to call center
+        
         // call 911
+        let url = URL(string: "tel://\(phoneNumber)")
+        UIApplication.shared.open(url!)
     }
-
+    
     @IBAction func fireButtonPressed(_ sender: Any) {
         emergencyType = "Fire"
         performSegue(withIdentifier: "toStatus", sender: self)
