@@ -29,19 +29,48 @@ class EmergencyViewController: UIViewController {
         
         let phoneNumber = "3194273804"
         
-        // find nearest dispatcher
-        // get the dispatcherID
-        let dispatcherID = "id" // temp
-        
         // add emergency to firebase
         let newEmergencyRef = self.ref.child("Emergency").childByAutoId()
+        let newEmergencyKey = newEmergencyRef.key
+        let dispatcherID = getRequest(params: ["emergencyID":newEmergencyKey])
         
         newEmergencyRef.setValue(["dispatcherID":dispatcherID, "userID": Auth.auth().currentUser?.uid, "emergencyType": emergencyType])
         newEmergencyRef.child("location").setValue(["altitude": mostRecentUserLocation!.altitude, "latitude": mostRecentUserLocation!.coordinate.latitude, "longitude": mostRecentUserLocation!.coordinate.longitude])
         
         // call 911
-        let url = URL(string: "tel://\(phoneNumber)")
-        UIApplication.shared.open(url!)
+//        let url = URL(string: "tel://\(phoneNumber)")
+//        UIApplication.shared.open(url!)
+    }
+    
+    func getRequest(params: [String:String]) -> String {
+        var myResult: String = ""
+        
+        let urlComp = NSURLComponents(string: "https://bchong.lib.id/playground/dispatcher_matcher/")!
+        var items = [URLQueryItem]()
+        
+        for (key,value) in params {
+            items.append(URLQueryItem(name: key, value: value))
+        }
+        
+        items = items.filter{!$0.name.isEmpty}
+        if !items.isEmpty {
+            urlComp.queryItems = items
+        }
+        
+        var urlRequest = URLRequest(url: urlComp.url!)
+        urlRequest.httpMethod = "GET"
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            if let data = data, let stringResponse = String(data: data, encoding: .utf8) {
+                print("Response \(stringResponse)")
+                myResult = stringResponse
+            }
+        })
+        task.resume()
+        
+        return myResult
     }
     
     @IBAction func fireButtonPressed(_ sender: Any) {
