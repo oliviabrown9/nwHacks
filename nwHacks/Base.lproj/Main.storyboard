@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,21 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="CLG-0D-Bst">
+            <objects>
+                <viewController id="WXo-Yl-Vhw" userLabel="Account View Controller" customClass="AccountViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tnc-6G-RMi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uem-4C-wbb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHP-JW-dTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-630" y="131"/>
+        </scene>
         <!--Create Emergency View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,36 +39,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-7J-t6U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byh-7J-t6U">
                                 <rect key="frame" x="75" y="154" width="61" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="jUp-lU-z4Z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Fire"/>
                                 <connections>
                                     <action selector="fireButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rq-AW-Smt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-NI-lR8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-NI-lR8">
                                 <rect key="frame" x="223" y="161" width="85" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Eza-7r-Dr3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Medical"/>
                                 <connections>
                                     <action selector="medicalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsf-1M-ziT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-9P-G6s">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-9P-G6s">
                                 <rect key="frame" x="220" y="394" width="90" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="R2u-OC-Gm5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Car Crash"/>
                                 <connections>
                                     <action selector="carCrashButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2z-uv-IF5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-Bp-Lym">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Du-Bp-Lym">
                                 <rect key="frame" x="65" y="385" width="80" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Police"/>
                                 <connections>
@@ -61,12 +82,69 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ina-9P-G6s" secondAttribute="trailing" constant="65" id="1tC-9R-mC8"/>
+                            <constraint firstItem="5Du-Bp-Lym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="8we-0N-0Vo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Du-Bp-Lym" secondAttribute="bottom" constant="225" id="94C-6N-Pf9"/>
+                            <constraint firstItem="BnL-NI-lR8" firstAttribute="leading" secondItem="Byh-7J-t6U" secondAttribute="trailing" constant="87" id="ISd-V5-Fti"/>
+                            <constraint firstItem="5Du-Bp-Lym" firstAttribute="baseline" secondItem="Ina-9P-G6s" secondAttribute="firstBaseline" id="MNy-Au-bIu"/>
+                            <constraint firstItem="Ina-9P-G6s" firstAttribute="leading" secondItem="5Du-Bp-Lym" secondAttribute="trailing" constant="75" id="PWO-PK-vKr"/>
+                            <constraint firstItem="Byh-7J-t6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="134" id="Rix-kR-vld"/>
+                            <constraint firstItem="BnL-NI-lR8" firstAttribute="centerX" secondItem="Ina-9P-G6s" secondAttribute="centerX" id="Xuh-Pj-v8R"/>
+                            <constraint firstItem="Byh-7J-t6U" firstAttribute="centerX" secondItem="5Du-Bp-Lym" secondAttribute="centerX" id="hDR-Ty-but"/>
+                            <constraint firstItem="BnL-NI-lR8" firstAttribute="baseline" secondItem="Byh-7J-t6U" secondAttribute="firstBaseline" id="j99-MN-cci"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ina-9P-G6s" secondAttribute="bottom" constant="234" id="thW-j9-KOg"/>
+                            <constraint firstItem="Byh-7J-t6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="wo5-wM-qI1"/>
+                            <constraint firstItem="BnL-NI-lR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="wz3-ZW-QfM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="Jeq-0h-vfd" kind="show" identifier="toStatus" id="I0b-au-4FQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+        <!--Status View Controller-->
+        <scene sceneID="9Wk-XI-6B9">
+            <objects>
+                <viewController id="Jeq-0h-vfd" customClass="StatusViewController" customModule="nwHacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fk1-xc-qoO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Out-lI-ric">
+                                <rect key="frame" x="162" y="345" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zft-Ii-Uk9">
+                                <rect key="frame" x="123" y="187" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zft-Ii-Uk9" firstAttribute="centerX" secondItem="Fk1-xc-qoO" secondAttribute="centerX" id="2EF-Rv-RE3"/>
+                            <constraint firstItem="5wm-fl-Kef" firstAttribute="bottom" secondItem="Out-lI-ric" secondAttribute="bottom" constant="301" id="UPY-WJ-Gfe"/>
+                            <constraint firstItem="zft-Ii-Uk9" firstAttribute="top" secondItem="5wm-fl-Kef" secondAttribute="top" constant="167" id="fTM-B1-Izb"/>
+                            <constraint firstItem="zft-Ii-Uk9" firstAttribute="centerX" secondItem="Out-lI-ric" secondAttribute="centerX" id="frh-ce-BN4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wm-fl-Kef"/>
+                    </view>
+                    <connections>
+                        <outlet property="emergencyTypeLabel" destination="zft-Ii-Uk9" id="gwq-56-aXb"/>
+                        <outlet property="statusLabel" destination="Out-lI-ric" id="mbC-u6-SLp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdb-hE-sFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840" y="129"/>
         </scene>
     </scenes>
 </document>
