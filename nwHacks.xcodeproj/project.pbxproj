@@ -13,6 +13,7 @@
 		751DA2FF200B380F0047A392 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751DA2FE200B380F0047A392 /* TodayViewController.swift */; };
 		751DA302200B380F0047A392 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751DA300200B380F0047A392 /* MainInterface.storyboard */; };
 		751DA306200B380F0047A392 /* nwHacksWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 751DA2FA200B380F0047A392 /* nwHacksWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7537A645200B64FB007BD08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249D200AB9F800BB033F /* Assets.xcassets */; };
 		75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12496200AB9F800BB033F /* AppDelegate.swift */; };
 		75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12498200AB9F800BB033F /* EmergencyViewController.swift */; };
 		75C1249C200AB9F800BB033F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249A200AB9F800BB033F /* Main.storyboard */; };
@@ -237,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7537A645200B64FB007BD08A /* Assets.xcassets in Resources */,
 				751DA302200B380F0047A392 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

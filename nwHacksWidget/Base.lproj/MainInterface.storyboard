@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +19,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goH-a0-x7m">
-                                <rect key="frame" x="145" y="3" width="30" height="30"/>
-                                <state key="normal" title="Fire"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goH-a0-x7m">
+                                <rect key="frame" x="20" y="1" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="goH-a0-x7m" secondAttribute="height" multiplier="1:1" id="Qal-hl-vww"/>
+                                    <constraint firstAttribute="width" constant="34" id="xC0-R2-IAO"/>
+                                </constraints>
+                                <state key="normal" image="icons8-fires-50"/>
                                 <connections>
                                     <action selector="fireButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="LSA-gE-O1U"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXi-XH-13a">
+                                <rect key="frame" x="82" y="1" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Kzt-dg-jP4"/>
+                                    <constraint firstAttribute="width" secondItem="YXi-XH-13a" secondAttribute="height" multiplier="1:1" id="kFW-gE-iME"/>
+                                </constraints>
+                                <state key="normal" image="icons8-gun-filled-40"/>
+                                <connections>
+                                    <action selector="crimeButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="4MU-dP-MG3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-Yz-auU">
+                                <rect key="frame" x="143" y="1" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwH-Yz-auU" secondAttribute="height" multiplier="1:1" id="MnK-BF-90l"/>
+                                    <constraint firstAttribute="width" constant="34" id="ngF-D3-B9u"/>
+                                </constraints>
+                                <state key="normal" image="icons8-earthquakes-40"/>
+                                <connections>
+                                    <action selector="earthquakeButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="srh-U8-e7u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upi-ov-2mn">
+                                <rect key="frame" x="266" y="1" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="6Hb-po-rSF"/>
+                                    <constraint firstAttribute="width" secondItem="Upi-ov-2mn" secondAttribute="height" multiplier="1:1" id="Rpg-YW-zxK"/>
+                                </constraints>
+                                <state key="normal" image="icons8-floods-40"/>
+                                <connections>
+                                    <action selector="floodButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hSm-pd-ny5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-2M-2pO">
+                                <rect key="frame" x="204" y="1" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WAO-2M-2pO" secondAttribute="height" multiplier="1:1" id="dQc-wo-WaO"/>
+                                    <constraint firstAttribute="width" constant="34" id="zkU-fW-5gQ"/>
+                                </constraints>
+                                <state key="normal" image="icons8-hospital-50"/>
+                                <connections>
+                                    <action selector="medicalButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="A5A-Xe-aaY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="goH-a0-x7m" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="8oQ-lt-mip"/>
+                            <constraint firstItem="nwH-Yz-auU" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="1jr-Og-1qT"/>
+                            <constraint firstItem="nwH-Yz-auU" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="OwN-dO-yjH"/>
                             <constraint firstItem="goH-a0-x7m" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="W6x-hC-T5N"/>
+                            <constraint firstItem="WAO-2M-2pO" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="bgL-wG-YhZ"/>
+                            <constraint firstItem="YXi-XH-13a" firstAttribute="leading" secondItem="goH-a0-x7m" secondAttribute="trailing" constant="28" id="ciz-Np-Zq8"/>
+                            <constraint firstItem="YXi-XH-13a" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="cx0-mz-026"/>
+                            <constraint firstItem="Upi-ov-2mn" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="jof-Kh-Qjc"/>
+                            <constraint firstItem="Upi-ov-2mn" firstAttribute="leading" secondItem="WAO-2M-2pO" secondAttribute="trailing" constant="28" id="pBj-dE-wNz"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Upi-ov-2mn" secondAttribute="trailing" constant="20" id="t3G-4A-qMb"/>
+                            <constraint firstItem="goH-a0-x7m" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="20" id="wUJ-UV-8XC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -38,6 +95,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-earthquakes-40" width="40" height="40"/>
+        <image name="icons8-fires-50" width="50" height="50"/>
+        <image name="icons8-floods-40" width="40" height="40"/>
+        <image name="icons8-gun-filled-40" width="40" height="40"/>
+        <image name="icons8-hospital-50" width="50" height="50"/>
+    </resources>
 </document>

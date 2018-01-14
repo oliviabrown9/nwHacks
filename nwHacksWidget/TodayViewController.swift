@@ -11,6 +11,39 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    
+    @IBAction func floodButtonPressed(_ sender: Any) {
+        let url: URL? = URL(string: "flood:")!
+        
+        if let appurl = url {
+            self.extensionContext!.open(appurl,
+                                        completionHandler: nil)
+        }
+    }
+    @IBAction func medicalButtonPressed(_ sender: Any) {
+        let url: URL? = URL(string: "medical:")!
+        
+        if let appurl = url {
+            self.extensionContext!.open(appurl,
+                                        completionHandler: nil)
+        }
+    }
+    @IBAction func earthquakeButtonPressed(_ sender: Any) {
+        let url: URL? = URL(string: "earthquake:")!
+        
+        if let appurl = url {
+            self.extensionContext!.open(appurl,
+                                        completionHandler: nil)
+        }
+    }
+    @IBAction func crimeButtonPressed(_ sender: Any) {
+        let url: URL? = URL(string: "crime:")!
+        
+        if let appurl = url {
+            self.extensionContext!.open(appurl,
+                                        completionHandler: nil)
+        }
+    }
     @IBAction func fireButtonPressed(_ sender: Any) {
         let url: URL? = URL(string: "fire:")!
         

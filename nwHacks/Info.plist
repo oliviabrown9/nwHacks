@@ -28,6 +28,46 @@
 				<string>fire</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nwhacks.hack</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>crime</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nwhacks.hack</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>earthquake</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nwhacks.hack</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>medical</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nwhacks.hack</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>flood</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

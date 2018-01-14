@@ -56,18 +56,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let message = url.scheme
+        setUpLocationManager()
         if message == "fire" {
-            setUpLocationManager()
             createEmergency(emergencyType: "Fire")
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatusViewController")
-            
-            self.window?.rootViewController = initialViewController
-            self.window?.makeKeyAndVisible()
         }
+        else if message == "crime" {
+            createEmergency(emergencyType: "Crime")
+        }
+        else if message == "earthquake" {
+            createEmergency(emergencyType: "Earthquake")
+        }
+        else if message == "medical" {
+            createEmergency(emergencyType: "Medical")
+        }
+        else if message == "flood" {
+            createEmergency(emergencyType: "Flood")
+        }
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "StatusViewController")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
     
