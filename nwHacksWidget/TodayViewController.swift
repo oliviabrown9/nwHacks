@@ -12,6 +12,13 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBAction func fireButtonPressed(_ sender: Any) {
+        let url: URL? = URL(string: "fire:")!
+        
+        if let appurl = url {
+            self.extensionContext!.open(appurl,
+                                        completionHandler: nil)
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

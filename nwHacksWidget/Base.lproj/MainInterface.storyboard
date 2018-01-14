@@ -27,10 +27,8 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="goH-a0-x7m" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="3" id="DAf-TX-6Dh"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="goH-a0-x7m" secondAttribute="trailing" constant="145" id="ICy-pI-7Yq"/>
-                            <constraint firstItem="goH-a0-x7m" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="145" id="bi8-er-zdh"/>
-                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="goH-a0-x7m" secondAttribute="bottom" constant="4" id="xF9-hY-FcP"/>
+                            <constraint firstItem="goH-a0-x7m" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="8oQ-lt-mip"/>
+                            <constraint firstItem="goH-a0-x7m" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="W6x-hC-T5N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
