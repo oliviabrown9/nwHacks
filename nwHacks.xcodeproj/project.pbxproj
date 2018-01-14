@@ -14,6 +14,7 @@
 		751DA302200B380F0047A392 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751DA300200B380F0047A392 /* MainInterface.storyboard */; };
 		751DA306200B380F0047A392 /* nwHacksWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 751DA2FA200B380F0047A392 /* nwHacksWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7537A645200B64FB007BD08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249D200AB9F800BB033F /* Assets.xcassets */; };
+		7582CFE1200BE8FC007ECEE4 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582CFE0200BE8FC007ECEE4 /* Pulsing.swift */; };
 		75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12496200AB9F800BB033F /* AppDelegate.swift */; };
 		75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12498200AB9F800BB033F /* EmergencyViewController.swift */; };
 		75C1249C200AB9F800BB033F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249A200AB9F800BB033F /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		751DA2FE200B380F0047A392 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		751DA301200B380F0047A392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		751DA303200B380F0047A392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7582CFE0200BE8FC007ECEE4 /* Pulsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		75C12493200AB9F800BB033F /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C12496200AB9F800BB033F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C12498200AB9F800BB033F /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				75C12498200AB9F800BB033F /* EmergencyViewController.swift */,
 				75C124A8200AD04A00BB033F /* AccountViewController.swift */,
 				75C124AA200ADAA400BB033F /* StatusViewController.swift */,
+				7582CFE0200BE8FC007ECEE4 /* Pulsing.swift */,
 				75C1249D200AB9F800BB033F /* Assets.xcassets */,
 				75C1249F200AB9F800BB033F /* LaunchScreen.storyboard */,
 				751DA2F4200B171A0047A392 /* GoogleService-Info.plist */,
@@ -331,6 +334,7 @@
 			files = (
 				75C124AB200ADAA400BB033F /* StatusViewController.swift in Sources */,
 				75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */,
+				7582CFE1200BE8FC007ECEE4 /* Pulsing.swift in Sources */,
 				75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */,
 				75C124A9200AD04A00BB033F /* AccountViewController.swift in Sources */,
 			);
