@@ -28,6 +28,7 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         ref = Database.database().reference()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))

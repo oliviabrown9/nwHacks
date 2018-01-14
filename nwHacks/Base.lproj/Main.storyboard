@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xvf-iw-rxV">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -151,12 +151,28 @@
                         <outlet property="height" destination="ZG7-1I-3HB" id="IkY-8D-PHY"/>
                         <outlet property="lastName" destination="kEZ-OA-SUa" id="qwO-im-9Sy"/>
                         <outlet property="weight" destination="MWJ-4y-Wyo" id="Te7-NC-dLz"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreate" id="f6e-aO-kZA"/>
+                        <segue destination="xvf-iw-rxV" kind="show" identifier="toCreate" id="K9b-pS-bgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHP-JW-dTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-631.20000000000005" y="130.88455772113943"/>
+            <point key="canvasLocation" x="-1087" y="131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AoU-b1-Jm9">
+            <objects>
+                <navigationController id="xvf-iw-rxV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vt6-z8-xQa">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZSF-Fh-IXI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IX6-sc-3gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="131"/>
         </scene>
         <!--Emergency View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -325,6 +341,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="N3B-bV-ajs"/>
                     <connections>
                         <outlet property="mapView" destination="cxA-wS-LsE" id="IGS-El-Grk"/>
                         <outlet property="navBar" destination="Wwb-gy-7tE" id="eMj-uc-ctB"/>
@@ -334,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.26600985221674"/>
+            <point key="canvasLocation" x="385" y="131"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="9Wk-XI-6B9">
@@ -345,7 +362,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zft-Ii-Uk9">
-                                <rect key="frame" x="187.66666666666666" y="211" width="0.0" height="0.0"/>
+                                <rect key="frame" x="187.66666666666666" y="255" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -354,31 +371,44 @@
                                 <rect key="frame" x="90" y="306" width="194" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Keep calm, your responder is on their way." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Out-lI-ric">
-                                <rect key="frame" x="16" y="639" width="343" height="92"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep calm, your responder is on their way." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Out-lI-ric">
+                                <rect key="frame" x="16" y="674.33333333333337" width="343" height="56.666666666666629"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <color key="textColor" red="1" green="0.43515097014022941" blue="0.2808797817672487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-Nk-fJY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3sE-vK-RBS"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.88279443980000005" green="0.18076771750000001" blue="0.064568514539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zft-Ii-Uk9" firstAttribute="centerX" secondItem="Fk1-xc-qoO" secondAttribute="centerX" id="2EF-Rv-RE3"/>
-                            <constraint firstItem="5wm-fl-Kef" firstAttribute="bottom" secondItem="Out-lI-ric" secondAttribute="bottom" constant="301" id="UPY-WJ-Gfe"/>
+                            <constraint firstItem="5wm-fl-Kef" firstAttribute="bottom" secondItem="Out-lI-ric" secondAttribute="bottom" constant="47" id="8Sv-Gu-Csf"/>
+                            <constraint firstItem="YY0-Nk-fJY" firstAttribute="top" secondItem="Fk1-xc-qoO" secondAttribute="top" id="aeD-of-u6x"/>
+                            <constraint firstItem="5wm-fl-Kef" firstAttribute="trailing" secondItem="Out-lI-ric" secondAttribute="trailing" constant="16" id="ahS-M7-8Wo"/>
                             <constraint firstItem="zft-Ii-Uk9" firstAttribute="top" secondItem="5wm-fl-Kef" secondAttribute="top" constant="167" id="fTM-B1-Izb"/>
                             <constraint firstItem="zft-Ii-Uk9" firstAttribute="centerX" secondItem="Out-lI-ric" secondAttribute="centerX" id="frh-ce-BN4"/>
+                            <constraint firstAttribute="trailing" secondItem="YY0-Nk-fJY" secondAttribute="trailing" id="jFw-4n-g6p"/>
+                            <constraint firstItem="Out-lI-ric" firstAttribute="leading" secondItem="5wm-fl-Kef" secondAttribute="leading" constant="16" id="l9e-oo-hqE"/>
+                            <constraint firstItem="YY0-Nk-fJY" firstAttribute="leading" secondItem="Fk1-xc-qoO" secondAttribute="leading" id="pvf-UG-ffF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5wm-fl-Kef"/>
                     </view>
                     <connections>
                         <outlet property="avatarImageView" destination="dis-uf-mxU" id="Bbc-X2-OYt"/>
                         <outlet property="emergencyTypeLabel" destination="zft-Ii-Uk9" id="gwq-56-aXb"/>
+                        <outlet property="navBar" destination="YY0-Nk-fJY" id="Kq0-nd-nfp"/>
                         <outlet property="statusLabel" destination="Out-lI-ric" id="mbC-u6-SLp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdb-hE-sFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839.20000000000005" y="128.57142857142858"/>
+            <point key="canvasLocation" x="1406" y="131"/>
         </scene>
     </scenes>
     <resources>

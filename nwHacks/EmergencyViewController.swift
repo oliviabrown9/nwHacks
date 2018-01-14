@@ -25,6 +25,8 @@ class EmergencyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isHidden = true
+        
         var colors = [UIColor]()
         colors.append(UIColor(red: 225/255, green: 238/255, blue: 195/255, alpha: 1))
         colors.append(UIColor(red: 240/255, green: 80/255, blue: 83/255, alpha: 1))
