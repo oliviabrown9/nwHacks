@@ -49,7 +49,34 @@ class EmergencyViewController: UIViewController {
         
         newEmergencyRef.setValue(["dispatcherID":dispatcherID, "userID": Auth.auth().currentUser?.uid, "emergencyType": emergencyType])
         newEmergencyRef.child("location").setValue(["altitude": mostRecentUserLocation!.altitude, "latitude": mostRecentUserLocation!.coordinate.latitude, "longitude": mostRecentUserLocation!.coordinate.longitude])
+        
+        messageContact(params: ["phoneNumber": "14256268741", "name": "Olivia Brown", "emergency": emergencyType])
         }
+    
+    private func messageContact(params: [String:String]) {
+        
+        let urlComp = NSURLComponents(string: "https://bchong.lib.id/playground/messaging/")!
+        var items = [URLQueryItem]()
+        
+        for (key,value) in params {
+            items.append(URLQueryItem(name: key, value: value))
+        }
+        
+        items = items.filter{!$0.name.isEmpty}
+        if !items.isEmpty {
+            urlComp.queryItems = items
+        }
+        
+        var urlRequest = URLRequest(url: urlComp.url!)
+        urlRequest.httpMethod = "GET"
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+        })
+        task.resume()
+        
+    }
     
     func getRequest(params: [String:String]) -> String {
         var myResult: String = ""
@@ -161,8 +188,8 @@ extension CAGradientLayer {
         UIGraphicsEndImageContext()
         return image
     }
-    
 }
+
 extension UINavigationBar {
     
     func setGradientBackground(colors: [UIColor]) {
