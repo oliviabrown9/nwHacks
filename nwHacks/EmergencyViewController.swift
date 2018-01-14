@@ -27,8 +27,6 @@ class EmergencyViewController: UIViewController {
     
     private func createEmergency(emergencyType: String) {
         
-        let phoneNumber = "3194273804"
-        
         // add emergency to firebase
         let newEmergencyRef = self.ref.child("Emergency").childByAutoId()
         let newEmergencyKey = newEmergencyRef.key
@@ -36,11 +34,7 @@ class EmergencyViewController: UIViewController {
         
         newEmergencyRef.setValue(["dispatcherID":dispatcherID, "userID": Auth.auth().currentUser?.uid, "emergencyType": emergencyType])
         newEmergencyRef.child("location").setValue(["altitude": mostRecentUserLocation!.altitude, "latitude": mostRecentUserLocation!.coordinate.latitude, "longitude": mostRecentUserLocation!.coordinate.longitude])
-        
-        // call 911
-//        let url = URL(string: "tel://\(phoneNumber)")
-//        UIApplication.shared.open(url!)
-    }
+        }
     
     func getRequest(params: [String:String]) -> String {
         var myResult: String = ""
