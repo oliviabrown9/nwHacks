@@ -8,29 +8,36 @@
 
 import UIKit
 import CoreLocation
+import Firebase
 
 class EmergencyViewController: UIViewController {
     
     fileprivate let locationManager = CLLocationManager()
     
     var emergencyType: String?
-    
     var mostRecentUserLocation: CLLocation?
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        setUpLocationManager()
     }
     
-    private func createEmergency() {
+    private func createEmergency(emergencyType: String) {
         
         let phoneNumber = "3194273804"
-        print(mostRecentUserLocation?.coordinate as Any)
-        print(mostRecentUserLocation?.altitude as Any)
-        print(mostRecentUserLocation?.floor as Any)
         
-        // find nearest call center
+        // find nearest dispatcher
+        // get the dispatcherID
+        let dispatcherID = "id" // temp
         
-        // send user info to call center
+        // add emergency to firebase
+        let newEmergencyRef = self.ref.child("Emergency").childByAutoId()
+        
+        newEmergencyRef.setValue(["dispatcherID":dispatcherID, "userID": Auth.auth().currentUser?.uid, "emergencyType": emergencyType])
+        newEmergencyRef.child("location").setValue(["altitude": mostRecentUserLocation!.altitude, "latitude": mostRecentUserLocation!.coordinate.latitude, "longitude": mostRecentUserLocation!.coordinate.longitude])
         
         // call 911
         let url = URL(string: "tel://\(phoneNumber)")
@@ -39,18 +46,22 @@ class EmergencyViewController: UIViewController {
     
     @IBAction func fireButtonPressed(_ sender: Any) {
         emergencyType = "Fire"
+        createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
     @IBAction func medicalButtonPressed(_ sender: Any) {
         emergencyType = "Medical"
+        createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
     @IBAction func policeButtonPressed(_ sender: Any) {
         emergencyType = "Police"
+        createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
     @IBAction func carCrashButtonPressed(_ sender: Any) {
         emergencyType = "Car Crash"
+        createEmergency(emergencyType: emergencyType!)
         performSegue(withIdentifier: "toStatus", sender: self)
     }
     

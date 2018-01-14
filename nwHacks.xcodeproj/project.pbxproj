@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		54FE6AF5718BC9C2883586C1 /* Pods_nwHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EFF64EDA9BD8C48890C29D /* Pods_nwHacks.framework */; };
 		751DA2F5200B171A0047A392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751DA2F4200B171A0047A392 /* GoogleService-Info.plist */; };
+		751DA2FC200B380F0047A392 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751DA2FB200B380F0047A392 /* NotificationCenter.framework */; };
+		751DA2FF200B380F0047A392 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751DA2FE200B380F0047A392 /* TodayViewController.swift */; };
+		751DA302200B380F0047A392 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751DA300200B380F0047A392 /* MainInterface.storyboard */; };
+		751DA306200B380F0047A392 /* nwHacksWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 751DA2FA200B380F0047A392 /* nwHacksWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		75C12497200AB9F800BB033F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12496200AB9F800BB033F /* AppDelegate.swift */; };
 		75C12499200AB9F800BB033F /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C12498200AB9F800BB033F /* EmergencyViewController.swift */; };
 		75C1249C200AB9F800BB033F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1249A200AB9F800BB033F /* Main.storyboard */; };
@@ -18,9 +22,38 @@
 		75C124AB200ADAA400BB033F /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C124AA200ADAA400BB033F /* StatusViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		751DA304200B380F0047A392 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75C1248B200AB9F800BB033F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751DA2F9200B380F0047A392;
+			remoteInfo = nwHacksWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		751DA30A200B380F0047A392 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				751DA306200B380F0047A392 /* nwHacksWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7021818B3879927DCE87F95D /* Pods-nwHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nwHacks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nwHacks/Pods-nwHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		751DA2F4200B171A0047A392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		751DA2FA200B380F0047A392 /* nwHacksWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = nwHacksWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		751DA2FB200B380F0047A392 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		751DA2FE200B380F0047A392 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		751DA301200B380F0047A392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		751DA303200B380F0047A392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C12493200AB9F800BB033F /* nwHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nwHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C12496200AB9F800BB033F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C12498200AB9F800BB033F /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +68,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		751DA2F7200B380F0047A392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751DA2FC200B380F0047A392 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C12490200AB9F800BB033F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		751DA2FD200B380F0047A392 /* nwHacksWidget */ = {
+			isa = PBXGroup;
+			children = (
+				751DA2FE200B380F0047A392 /* TodayViewController.swift */,
+				751DA300200B380F0047A392 /* MainInterface.storyboard */,
+				751DA303200B380F0047A392 /* Info.plist */,
+			);
+			path = nwHacksWidget;
+			sourceTree = "<group>";
+		};
 		75C1248A200AB9F800BB033F = {
 			isa = PBXGroup;
 			children = (
 				75C12495200AB9F800BB033F /* nwHacks */,
+				751DA2FD200B380F0047A392 /* nwHacksWidget */,
 				75C12494200AB9F800BB033F /* Products */,
 				8F5626A56CD9573320859435 /* Pods */,
 				9AF962B9C98932AB825D40C4 /* Frameworks */,
@@ -60,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				75C12493200AB9F800BB033F /* nwHacks.app */,
+				751DA2FA200B380F0047A392 /* nwHacksWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C0EFF64EDA9BD8C48890C29D /* Pods_nwHacks.framework */,
+				751DA2FB200B380F0047A392 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,6 +154,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		751DA2F9200B380F0047A392 /* nwHacksWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751DA307200B380F0047A392 /* Build configuration list for PBXNativeTarget "nwHacksWidget" */;
+			buildPhases = (
+				751DA2F6200B380F0047A392 /* Sources */,
+				751DA2F7200B380F0047A392 /* Frameworks */,
+				751DA2F8200B380F0047A392 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nwHacksWidget;
+			productName = nwHacksWidget;
+			productReference = 751DA2FA200B380F0047A392 /* nwHacksWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		75C12492200AB9F800BB033F /* nwHacks */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75C124A5200AB9F800BB033F /* Build configuration list for PBXNativeTarget "nwHacks" */;
@@ -110,10 +181,12 @@
 				75C12491200AB9F800BB033F /* Resources */,
 				F8299DCF08AF13CD309EF9FF /* [CP] Embed Pods Frameworks */,
 				C8A2BD07BF475B7894BA0830 /* [CP] Copy Pods Resources */,
+				751DA30A200B380F0047A392 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				751DA305200B380F0047A392 /* PBXTargetDependency */,
 			);
 			name = nwHacks;
 			productName = nwHacks;
@@ -126,10 +199,14 @@
 		75C1248B200AB9F800BB033F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Olivia Brown";
 				TargetAttributes = {
+					751DA2F9200B380F0047A392 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					75C12492200AB9F800BB033F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -150,11 +227,20 @@
 			projectRoot = "";
 			targets = (
 				75C12492200AB9F800BB033F /* nwHacks */,
+				751DA2F9200B380F0047A392 /* nwHacksWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		751DA2F8200B380F0047A392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751DA302200B380F0047A392 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C12491200AB9F800BB033F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +315,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		751DA2F6200B380F0047A392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751DA2FF200B380F0047A392 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75C1248F200AB9F800BB033F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,7 +336,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		751DA305200B380F0047A392 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751DA2F9200B380F0047A392 /* nwHacksWidget */;
+			targetProxy = 751DA304200B380F0047A392 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		751DA300200B380F0047A392 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				751DA301200B380F0047A392 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		75C1249A200AB9F800BB033F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -262,6 +372,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		751DA308200B380F0047A392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
+				INFOPLIST_FILE = nwHacksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwhacks.hack.nwHacksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		751DA309200B380F0047A392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
+				INFOPLIST_FILE = nwHacksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwhacks.hack.nwHacksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		75C124A3200AB9F800BB033F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7021818B3879927DCE87F95D /* Pods-nwHacks.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
@@ -389,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC423BB3F29172E42DED944B /* Pods-nwHacks.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GEKYYW3CQ;
@@ -404,6 +548,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		751DA307200B380F0047A392 /* Build configuration list for PBXNativeTarget "nwHacksWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751DA308200B380F0047A392 /* Debug */,
+				751DA309200B380F0047A392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		75C1248E200AB9F800BB033F /* Build configuration list for PBXProject "nwHacks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
