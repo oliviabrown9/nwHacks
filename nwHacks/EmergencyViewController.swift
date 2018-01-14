@@ -9,11 +9,14 @@
 import UIKit
 import CoreLocation
 import Firebase
+import MapKit
 
 class EmergencyViewController: UIViewController {
     
     fileprivate let locationManager = CLLocationManager()
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var sosButton: UIImageView!
     
     var emergencyType: String?
     var mostRecentUserLocation: CLLocation?
@@ -26,6 +29,12 @@ class EmergencyViewController: UIViewController {
         colors.append(UIColor(red: 225/255, green: 238/255, blue: 195/255, alpha: 1))
         colors.append(UIColor(red: 240/255, green: 80/255, blue: 83/255, alpha: 1))
         navBar.setGradientBackground(colors: colors)
+        
+        sosButton.layer.shadowColor = UIColor.black.cgColor
+        sosButton.layer.shadowOpacity = 1
+        sosButton.layer.shadowOffset = CGSize.zero
+        sosButton.layer.shadowRadius = 10
+        mapView.layer.cornerRadius = 10
         
         ref = Database.database().reference()
         setUpLocationManager()
@@ -122,6 +131,10 @@ extension EmergencyViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         mostRecentUserLocation = locations[0] as CLLocation
+        let center = CLLocationCoordinate2D(latitude: (mostRecentUserLocation?.coordinate.latitude)!, longitude: (mostRecentUserLocation?.coordinate.longitude)!)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.mapView.setRegion(region, animated: true)
     }
 }
 extension CAGradientLayer {
